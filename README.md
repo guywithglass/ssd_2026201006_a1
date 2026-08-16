@@ -13,3 +13,17 @@ reflog recovery, and release tagging.
 - Dashboard
 - Settings
 - Logout
+
+## Setup
+
+### Requirements
+
+- Git
+- A C++ compiler such as `g++`
+- Linux, macOS, or Windows with a suitable C++ environment
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/guywithglass/ssd_2026201006_a1.git
+cd ssd_2026201006_a1
