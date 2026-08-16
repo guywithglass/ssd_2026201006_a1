@@ -18,6 +18,20 @@ public:
         std::cout << "Pending tasks: " << pendingTasks << "\n";
     }
 
+    void displayTaskStatus() const {
+        std::cout << "\nTask Status\n";
+
+        if (pendingTasks == 0) {
+            std::cout << "All tasks are completed.\n";
+        } else if (pendingTasks <= 3) {
+            std::cout << "You have " << pendingTasks
+                    << " pending task(s).\n";
+        } else {
+            std::cout << "You have several pending tasks. "
+                    << "Please review them soon.\n";
+        }
+    }
+
     void displayMenu() const {
         std::cout << "\n1. View Profile\n";
         std::cout << "2. View Settings\n";
@@ -49,6 +63,7 @@ int main() {
     Dashboard dashboard("Vishal", 3);
 
     dashboard.displayWelcome();
+    dashboard.displayTaskStatus();
     dashboard.displayMenu();
 
     int choice;
