@@ -24,6 +24,25 @@ public:
         std::cout << "3. Logout\n";
         std::cout << "4. Exit\n";
     }
+
+    void handleSelection(int choice) const {
+        switch (choice) {
+            case 1:
+                std::cout << "Opening profile...\n";
+                break;
+            case 2:
+                std::cout << "Opening settings...\n";
+                break;
+            case 3:
+                std::cout << "Logging out...\n";
+                break;
+            case 4:
+                std::cout << "Exiting dashboard...\n";
+                break;
+            default:
+                std::cout << "Invalid option.\n";
+        }
+    }
 };
 
 int main() {
@@ -31,6 +50,12 @@ int main() {
 
     dashboard.displayWelcome();
     dashboard.displayMenu();
+
+    int choice;
+    std::cout << "\nSelect an option: ";
+    std::cin >> choice;
+
+    dashboard.handleSelection(choice);
 
     return 0;
 }
