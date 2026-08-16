@@ -6,7 +6,11 @@ The project demonstrates Git-based development using separate feature branches,
 meaningful commits, merging, file operations, conflict resolution, stash,
 reflog recovery, and release tagging.
 
-## Features
+The portal provides a simple interface for managing student information and 
+account activities.
+
+
+# Features
 
 - User Login
 - Student Profile
