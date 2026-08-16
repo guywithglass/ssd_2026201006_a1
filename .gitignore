@@ -1,9 +1,9 @@
 # C++ compiled executables
-dashboard
-login
-logout
-settings
-profile
+/dashboard
+/login
+/logout
+/settings
+/profile
 
 # Object files
 *.o
