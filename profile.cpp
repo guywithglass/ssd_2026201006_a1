@@ -21,6 +21,10 @@ public:
         std::cout << "Email  : " << email << "\n";
         std::cout << "Course : " << course << "\n";
     }
+
+    void updateEmail(const std::string& newEmail) {
+        email = newEmail;
+}
 };
 
 int main() {
@@ -31,6 +35,8 @@ int main() {
     );
 
     student.displayProfile();
+    student.updateEmail("newemail@example.com");
+    student.displayProfile();   
 
     return 0;
 }
