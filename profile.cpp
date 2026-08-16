@@ -32,6 +32,19 @@ public:
         std::cout << "\nCourse Details\n";
         std::cout << "Course: " << course << "\n";
     }
+
+    bool isComplete() const {
+        return !name.empty() && !email.empty() && !course.empty();
+    }
+
+    void displayCompletionStatus() const {
+        std::cout << "\nProfile Status\n";
+        if (isComplete()) {
+            std::cout << "Profile is complete.\n";
+        } else {
+            std::cout << "Profile is incomplete.\n";
+        }
+    }
 };
 
 int main() {
@@ -44,6 +57,7 @@ int main() {
     student.displayProfile();
     student.displayContactSummary();
     student.displayCourseDetails();
+    student.displayCompletionStatus();
 
     return 0;
 }
