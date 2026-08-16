@@ -6,6 +6,11 @@ bool validateCredentials(const std::string& username,
     return !username.empty() && !password.empty();
 }
 
+bool authenticateUser(const std::string& username,
+                      const std::string& password) {
+    return username == "student" && password == "portal123";
+}
+
 int main() {
     std::string username;
     std::string password;
@@ -16,10 +21,15 @@ int main() {
     std::cout << "Password: ";
     std::cin >> password;
 
-    if (validateCredentials(username, password)) {
-        std::cout << "Login credentials accepted." << std::endl;
-    } else {
+    if (!validateCredentials(username, password)) {
         std::cout << "Username and password are required." << std::endl;
+        return 1;
+    }
+
+    if (authenticateUser(username, password)) {
+        std::cout << "Login successful. Welcome, " << username << "!" << std::endl;
+    } else {
+        std::cout << "Invalid username or password." << std::endl;
     }
 
     return 0;
