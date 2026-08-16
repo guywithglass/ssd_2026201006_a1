@@ -27,6 +27,11 @@ public:
         std::cout << "Email  : " << email << "\n";
         std::cout << "Course : " << course << "\n";
     }
+
+    void displayCourseDetails() const {
+        std::cout << "\nCourse Details\n";
+        std::cout << "Course: " << course << "\n";
+    }
 };
 
 int main() {
@@ -38,6 +43,7 @@ int main() {
 
     student.displayProfile();
     student.displayContactSummary();
+    student.displayCourseDetails();
 
     return 0;
 }
