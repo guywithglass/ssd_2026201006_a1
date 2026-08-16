@@ -3,22 +3,34 @@
 
 class Profile {
 private:
-    std::string username;
+    std::string name;
     std::string email;
+    std::string course;
 
 public:
-    Profile(const std::string& username, const std::string& email)
-        : username(username), email(email) {}
+    Profile(const std::string& name,
+            const std::string& email,
+            const std::string& course)
+        : name(name), email(email), course(course) {}
 
-    void display() const {
-        std::cout << "Username: " << username << std::endl;
-        std::cout << "Email: " << email << std::endl;
+    void displayProfile() const {
+        std::cout << "============================\n";
+        std::cout << "       STUDENT PROFILE      \n";
+        std::cout << "============================\n";
+        std::cout << "Name   : " << name << "\n";
+        std::cout << "Email  : " << email << "\n";
+        std::cout << "Course : " << course << "\n";
     }
 };
 
 int main() {
-    Profile profile("user123", "user@example.com");
-    profile.display();
+    Profile student(
+        "Vishal",
+        "vishal@example.com",
+        "Software Development"
+    );
+
+    student.displayProfile();
 
     return 0;
 }
