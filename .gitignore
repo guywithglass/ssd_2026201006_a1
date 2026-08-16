@@ -1,0 +1,12 @@
+# C++ compiled executables
+dashboard
+login
+logout
+settings
+profile
+
+# Object files
+*.o
+
+# Build directories
+build/
