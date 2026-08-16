@@ -14,11 +14,16 @@ public:
         std::cout << "5. Back\n";
         std::cout << "====================\n";
     }
+
+    void showNotificationStatus() const {
+        std::cout << "Notifications: Enabled" << std::endl;
+    }
 };
 
 int main() {
     Settings settings;
     settings.show();
+    settings.showNotificationStatus();
 
     return 0;
 }
